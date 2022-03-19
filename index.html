@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>VueJS Tutorials</title>
         <link href="main.css" rel="stylesheet" />
     </head>
     <body>
+        <div id="app">
+            <h2>{{name}}</h2>
 
-      <div id="app">
-        <h2>{{name}}</h2>
-        <label>Name:</label>
-        <input type="text" v-model="name">
-        <br>
-        <label>Checkbox value: {{checked}}</label>
-        <input type="checkbox" v-model="checked">
-      </div>
+            <label>Name:</label>
+            <input type="text" v-model="name" />
 
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-      <script src="app.js"></script>
+            <br />
+
+            <label>Checkbox value: {{checked}}</label>
+            <input type="checkbox" v-model="checked" />
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
