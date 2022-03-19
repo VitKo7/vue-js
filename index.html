@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>VueJS Tutorials</title>
         <link href="main.css" rel="stylesheet" />
     </head>
     <body>
+        <div id="app">
+            <ul>
+                <!-- <li v-for="person in people">{{person.name}}</li> -->
+                <li
+                    v-for="person in people"
+                    :class="{'strike':!person.stillAlive}"
+                >
+                    {{person.name}}
+                </li>
+            </ul>
+        </div>
 
-      <div id="app">
-        <ul>
-          <li v-for="person in people" :class="{'strike':!person.stillAlive}">{{person.name}}</li>
-        </ul>
-      </div>
-
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-      <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
