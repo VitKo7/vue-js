@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>VueJS Tutorials</title>
         <link href="main.css" rel="stylesheet" />
     </head>
     <body>
+        <div id="app">
+            <button @click="error = !error">Toggle Error</button>
+            <button @click="success = !success">Toggle Success</button>
 
-      <div id="app">
-        <button @click="error = !error">Toggle Error</button>
-        <button @click="success = !success">Toggle Success</button>
-        <p v-if="error">Here you can see error message!</p>
-        <p v-else>Default message</p>
-        <p v-show="success">Here you can see success message!</p>
-      </div>
+            <p v-if="error">Here you can see error message!</p>
+            <!-- директива 'v-if' додає та видаляє елемент з DOM-дерева -->
+            <p v-else>Default message</p>
 
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-      <script src="app.js"></script>
+            <p v-show="success">Here you can see success message!</p>
+            <!-- директива 'v-show' додає елемент в DOM-дерево завжди та регулює
+            показ елементу DOM-дереві через 'display:none' -->
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
