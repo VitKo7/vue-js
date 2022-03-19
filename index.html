@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>VueJS Tutorials</title>
         <link href="main.css" rel="stylesheet" />
     </head>
     <body>
+        <div id="app">
+            <h2>{{counter}}</h2>
+            <button @click="counter++">+1</button>
+            <button @click.prevent.self="substract">-1</button>
+            <button @dblclick="counter=0">Reset</button>
+        </div>
 
-      <div id="app">
-        <h2>{{counter}}</h2>
-        <button @click="counter++">+1</button>
-        <button @click.prevent.self="substract">-1</button>
-        <button @dblclick="counter=0">Reset</button>
-      </div>
-      <form @submit.prevent></form>
-      <div @scroll.passive="onScroll"></div>
+        <form @submit.prevent></form>
+        <div @scroll.passive="onScroll"></div>
 
-      <!--
+        <!--
         .stop
         .prevent
         .capture
         .self
-        .once
-        .passive
+        .once - виклик лише 1 раз
+        .passive - не відміняє базову поведінку + своя логіка = об'єднує
+        модифікатори можна комбінувати: ряд.12
       -->
 
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-      <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>
