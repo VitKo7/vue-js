@@ -3,7 +3,7 @@
     <h2 @click="show">Inner title</h2>
     <ul>
       <li v-for="person in people">
-        {{person}}
+        {{ person }}
       </li>
     </ul>
   </div>
@@ -11,22 +11,21 @@
 
 <script>
 export default {
+  //   props: ["people"],
   props: {
     people: {
       type: Array,
       required: false,
-      default: [],
+      default: []
     }
   },
   data() {
-    return {
-
-    }
+    return {};
   },
   methods: {
     show: function() {
       console.log(this.people);
     }
   }
-}
+};
 </script>
